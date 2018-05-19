@@ -4,6 +4,7 @@ This is a side-by-side comparison of JavaScript (ES2015) and Python (3.6) syntax
 ## Contents
 
 [Important Notes](#important-notes)  
+[Similarities](#similarities)  
 [Basics](#basics)  
 [Functions](#functions)  
 [Loops](#loops)  
@@ -11,8 +12,9 @@ This is a side-by-side comparison of JavaScript (ES2015) and Python (3.6) syntax
 
 ## Important Notes
 
-JavaScript uses brackets { and } to create blocks.  
-Python uses indentation instead of brackets. Expressions inside statements (such as a loop or class) must be indented. 
+JavaScript uses brackets { } to create blocks. Python uses indentation instead of brackets. This means that expressions inside statements (such as a loop or class) must be on a new line and indented. Look at [Functions](#functions) or [Loops](#loops) sections for examples.
+
+## Similarities
 
 ## Basics
 
@@ -25,29 +27,66 @@ Python uses indentation instead of brackets. Expressions inside statements (such
 | Printing lines | `console.log("Hello world");` | `print("Hello world")` |
 | Variables inside strings (old) | `"Hello, I feel " + mood` | `"Hello, I feel {}".format(mood)` |
 | Variables inside strings (new) | \`Hello, I feel ${mood}\` | `f"Hello, I feel {mood}"` |
-| Swap values of variables | `[a, b] = [b, a]` | `a, b = b, a` |
+| Swap values of variables | `[a, b] = [b, a];` | `a, b = b, a` |
+| Find string/array length | `string.length();` | `len(string)` |
 | Find string inside a string | `"Hello".indexOf("ell");` returns 1 | `"Hello".find("ell")` returns 1 |
 | Find string from a starting index | `"Kellie". indexOf("e", 3)` returns 5 | `"Kellie".find("ell", 3)` returns 5 |
+| Capitalize string | string[0].toUpperCase(); | string.capitalize() |
+| Upper case string | string.toUpperCase(); | string.upper() |
+| Lower case string | string.toLowerCase(); | string.lower() |
+| User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
 
 ## Functions
 
 Creating a function or defining procedures
-
+```
 let myFunction = function() { 
   console.log("Hello world!"); 
 } 
-
+```
+```
 function myFunction() {
   console.log("Hello world!"); 
 } 
-
+```
+```
 def name():
   print("Hello world!")
-  
+```
+
 ## Loops
 
+**While Loop**
+```
+while (i < 10) {
+  // do a thing
+}
+```
+```
 while i < 10:
   \# do a thing
+```
+
+**if/else**
+```
+if (i < 10) {
+  // do a thing;
+} else if (i === 5) {
+  // do another thing;
+} else {
+  // whatever
+}
+```
+```
+if i < 10:
+  # do a thing
+else if i === 5:
+  # do another thing
+else:
+  # whatever
+```
+
+**For Loops**
 
 ## Classes
 
@@ -91,8 +130,8 @@ class Duckling(Duck):
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
-Assigning a class | const donald = new Duck(‘donald’); | donald = Duck(‘donald’) |
-Using a class method | donald.quack(); | donald.quack() |
+Assigning a class | `const donald = new Duck(‘donald’);` | `donald = Duck(‘donald’)` |
+Using a class method | `donald.quack();` | `donald.quack()` |
 
 
 
