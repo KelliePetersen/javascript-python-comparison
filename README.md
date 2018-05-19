@@ -5,8 +5,8 @@ Ctrl + F is your friend.
 
 ## Contents
 
-[Basics](https://github.com/KelliePetersen/javascript-python-comparison#Basics)  
-[Classes](https://github.com/KelliePetersen/javascript-python-comparison#Classes)
+[Basics](#Basics)  
+[Classes](#Classes)
 
 ## Basics
 
