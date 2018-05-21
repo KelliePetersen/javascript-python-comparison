@@ -39,52 +39,25 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 ## Functions
 
 Creating a function or defining procedures
-```
-let myFunction = function() { 
-  console.log("Hello world!"); 
-} 
-```
-```
-function myFunction() {
-  console.log("Hello world!"); 
-} 
-```
-```
-def name():
-  print("Hello world!")
-```
+
+| JavaScript | Python |
+| --- | --- |
+| `let myFunction = function() {` <br> &nbsp; &nbsp; `console.log("Hello world!");` <br> `}` | `def name():` <br> &nbsp; &nbsp; `print("Hello world!")` |
+| `function myFunction() {` <br> &nbsp; &nbsp; `console.log("Hello world!");` <br> `}` |
 
 ## Loops
 
 **While Loop**
-```
-while (i < 10) {
-  // do a thing
-}
-```
-```
-while i < 10:
-  \# do a thing
-```
+
+| JavaScript | Python |
+| --- | --- |
+| `while (i < 10) {` <br> &nbsp; &nbsp; `// do a thing` <br> `}` | `while i < 10:` <br> &nbsp; &nbsp; `\# do a thing` |
 
 **if/else**
-```
-if (i < 10) {
-  // do a thing;
-} else if (i === 5) {
-  // do another thing;
-} else {
-  // whatever
-}
-```
-```
-if i < 10:
-  # do a thing
-else if i === 5:
-  # do another thing
-else:
-  # whatever
-```
+
+| JavaScript | Python |
+| --- | --- |
+| `if (i < 10) {` <br> &nbsp; &nbsp; `// do a thing;` <br> `} else if (i === 5) {` <br> &nbsp; &nbsp; `// do another thing;` <br> `} else {` <br> &nbsp; &nbsp; `// whatever` <br> `}` | `if i < 10:` <br> &nbsp; &nbsp; `# do a thing` <br> `else if i === 5:` <br> &nbsp; &nbsp; `# do another thing` <br> `else:` <br> &nbsp; &nbsp; ` # whatever` |
 
 **For Loops**
 
