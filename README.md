@@ -5,23 +5,16 @@ Searching for something specific? Use ctrl + f (or cmd + f)
 ## Contents
 
 [Important Notes](#important-notes)  
-[Similarities](#similarities)  
 [Basics](#basics)  
+[Strings](#strings)  
+[Arrays and Lists](#arrays-and-lists)  
 [Functions](#functions)  
 [Loops](#loops)  
 [Classes](#classes)  
 
 ## Important Notes
 
-JavaScript uses brackets { } to create blocks. Python uses indentation instead of brackets. This means that expressions inside statements (such as a loop or class) must be on a new line and indented. Look at [Functions](#functions) or [Loops](#loops) sections for examples.
-
-## Similarities
-
-| Description | JavaScript | Python |
-| --- | --- | --- |
-| Creating an array/list | var array = [1,2,3] | list = [1,2,3] |
-| Select an index inside a array/list/string | array[2] | list[2] |
-| Get an array/list backwards | array.reverse() | list.reverse() or list[::-1] |
+JavaScript uses brackets { } to create blocks. Python uses indentation instead of brackets. This means that expressions inside statements (such as a loop or class) must be on a new line and indented. Look at [Classes](#classes) section for examples.
 
 ## Basics
 
@@ -32,18 +25,39 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Multi-line Comment| `/* I am a multi-line comment \*/` | `""" I am a multi-line comment """` |
 | Defining variables | `var/const/let myVariable = "I am a variable";` | `myVariable = "I am a variable"` | 
 | Printing lines | `console.log("Hello world");` | `print("Hello world")` |
+| Swap values of variables | `[a, b] = [b, a];` | `a, b = b, a` |
+| User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
+
+## Strings
+
+| Description | JavaScript | Python |
+| --- | --- | --- |
 | Variables inside strings (old) | `"Hello, I feel " + mood` | `"Hello, I feel {}".format(mood)` |
 | Variables inside strings (new) | \`Hello, I feel ${mood}\` | `f"Hello, I feel {mood}"` |
-| Swap values of variables | `[a, b] = [b, a];` | `a, b = b, a` |
-| Find string/array length | `string.length();` | `len(string)` |
+| Find string length | `string.length();` | `len(string)` |
 | Find string inside a string | `"Hello".indexOf("ell");` returns 1 | `"Hello".find("ell")` returns 1 |
 | Find string from a starting index | `"Kellie". indexOf("e", 3)` returns 5 | `"Kellie".find("ell", 3)` returns 5 |
 | Capitalize string | string[0].toUpperCase(); | string.capitalize() |
 | Upper case string | string.toUpperCase(); | string.upper() |
 | Lower case string | string.toLowerCase(); | string.lower() |
-| User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
-| Get the last element of an array/list | array[array.length-1]| list[-1] |
+
+## Arrays and Lists   
+
+| Description | JavaScript | Python |
+| --- | --- | --- |
+| Creating an array/list | var array = [1,2,3] | list = [1,2,3] |
+| Select an index | array[2] | list[2] |
+| Find array length | `string.length();` | `len(string)` |
+| Get an array/list backwards | array.reverse() | list.reverse() or list[::-1] |
+| Get the last element | array[array.length-1]| list[-1] |
 | Copying a portion of an array/list | array.slice(start, end) | list[start:end] |
+| Add an element to the end | array.push(element) | list.append(element) |
+| Add an element to the start | array.shift(element) | |
+| Combine two arrays/lists | array.concat(array2) | list.extend(list2) |
+| Insert an element into a specific index | array.splice(index, 0, element) | list.insert(index, element) | 
+| Remove an element at a specific index | array.splice (index, 1) | list.pop(index) |
+| Remove an element | | list.remove(element) | 
+
 
 ## Functions
 
