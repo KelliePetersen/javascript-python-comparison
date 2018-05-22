@@ -1,5 +1,6 @@
 # JavaScript vs Python
-This is a side-by-side comparison of JavaScript (ES2015) and Python (3.6) syntax.
+This is a side-by-side comparison of JavaScript (ES2015) and Python (3.6) syntax.  
+Searching for something specific? Use ctrl + f (or cmd + f)
 
 ## Contents
 
@@ -59,7 +60,7 @@ Creating a function or defining procedures
 
 | JavaScript | Python |
 | --- | --- |
-| `while (i < 10) {` <br> &nbsp; &nbsp; `// do a thing` <br> `}` | `while i < 10:` <br> &nbsp; &nbsp; `\# do a thing` |
+| `while (i < 10) {` <br> &nbsp; &nbsp; `// do a thing` <br> `}` | `while i < 10:` <br> &nbsp; &nbsp; `# do a thing` |
 
 **if/else**
 
@@ -68,6 +69,12 @@ Creating a function or defining procedures
 | `if (i < 10) {` <br> &nbsp; &nbsp; `// do a thing;` <br> `} else if (i === 5) {` <br> &nbsp; &nbsp; `// do another thing;` <br> `} else {` <br> &nbsp; &nbsp; `// whatever` <br> `}` | `if i < 10:` <br> &nbsp; &nbsp; `# do a thing` <br> `else if i === 5:` <br> &nbsp; &nbsp; `# do another thing` <br> `else:` <br> &nbsp; &nbsp; ` # whatever` |
 
 **For Loops**
+
+| JavaScript | Python |
+| --- | --- |
+| for (let i = 0; i < 10; i++) { <br> &nbsp; &nbsp; // do a thing <br> } | for i in range(10): <br> &nbsp; &nbsp; # do a thing |
+| for (var property in object) { <br> &nbsp; &nbsp; // do a thing <br> } | for thing in things: <br> &nbsp; &nbsp; # do a thing |
+| for (let value in array) { <br> &nbsp; &nbsp; // do a thing <br> } |
 
 ## Classes
 
