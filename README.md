@@ -16,6 +16,12 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 
 ## Similarities
 
+| Description | JavaScript | Python |
+| --- | --- | --- |
+| Creating an array/list | var array = [1,2,3] | list = [1,2,3] |
+| Select an index inside a array/list/string | array[2] | list[2] |
+| Get an array/list backwards | array.reverse() | list.reverse() or list[::-1] |
+
 ## Basics
 
 | Description | JavaScript | Python |
@@ -35,6 +41,8 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Upper case string | string.toUpperCase(); | string.upper() |
 | Lower case string | string.toLowerCase(); | string.lower() |
 | User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
+| Get the last element of an array/list | array[array.length-1]| list[-1] |
+| Copying a portion of an array/list | array.slice(start, end) | list[start:end] |
 
 ## Functions
 
