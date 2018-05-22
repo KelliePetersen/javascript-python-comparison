@@ -25,7 +25,7 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Multi-line Comment| `/* I am a multi-line comment \*/` | `""" I am a multi-line comment """` |
 | Defining variables | `var/const/let myVariable = "I am a variable";` | `myVariable = "I am a variable"` | 
 | Printing lines | `console.log("Hello world");` | `print("Hello world")` |
-| Swap values of variables | `[a, b] = [b, a];` | `a, b = b, a` |
+| Swap values | `[a, b] = [b, a];` | `a, b = b, a` |
 | User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
 
 ## Strings
@@ -57,7 +57,15 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Insert an element into a specific index | array.splice(index, 0, element) | list.insert(index, element) | 
 | Remove an element at a specific index | array.splice (index, 1) | list.pop(index) |
 | Remove an element | | list.remove(element) | 
-
+| Returns the first index of an element | array.indexOf(element) | list.index(element) |
+| Returns the last index of an element | array.lastIndexOf(element) | |
+| Counts the occurences of an element | | list.count(element) |
+| Sort elements in an array/list | array.sort() | list.sort() |
+| Make a shallow copy | array.slice(0, array.length) | list.copy() | 
+| Remove all elements in an array/list | array.splice(0, array.length) | list.clear() |
+| Check if there is at least one element <br> matching the specified element | | list.any(element) |
+| Check if all elements equal a specified element | | list.all(element) |
+| Perform a function on each element | array.map(function)| map(function, list) |
 
 ## Functions
 
