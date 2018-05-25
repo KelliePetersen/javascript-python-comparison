@@ -1,5 +1,6 @@
 # JavaScript vs Python
 This is a side-by-side comparison of JavaScript (ES2015) and Python (3.6) syntax.  
+I created it so that I could use a description to find the command I need.  
 Searching for something specific? Use ctrl + f (or cmd + f)
 
 ## Contents
@@ -69,8 +70,14 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Check if there is at least one element <br> matching the specified element | | list.any(element) |
 | Check if all elements equal a specified element | | list.all(element) |
 | Check if an object is an array/list | array.isArray(object) | |
+| Check if all elements pass a function test | array.every(function) | |
+| Check if some elements pass a function test | array.some(function) | |
 | Perform a function on each element | array.map(function)| map(function, list) |
 | Copy and reorder elements | array.copyWithin(position, start, end) | |
+| Fill an existing array/list with values | array.fill(value, start, end) | |
+| Return an iterator with keys [a,b]-> 0 1 | var iterator = array.keys() | |
+| Return an iterator with values [a,b]-> a b | var iterator = array.value() | |
+| Return an iterator with key/value pairs | var iterator = array.entries() | |
 
 ## Functions
 
