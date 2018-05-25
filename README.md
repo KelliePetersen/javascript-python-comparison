@@ -46,17 +46,20 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Creating an array/list | var array = [1,2,3] | list = [1,2,3] |
+| Turn input into an array/list | Array.from(input) | |
 | Select an index | array[2] | list[2] |
-| Find array length | `string.length();` | `len(string)` |
+| Find array length | string.length(); | len(string) |
 | Get an array/list backwards | array.reverse() | list.reverse() or list[::-1] |
 | Get the last element | array[array.length-1]| list[-1] |
 | Copying a portion of an array/list | array.slice(start, end) | list[start:end] |
 | Add an element to the end | array.push(element) | list.append(element) |
-| Add an element to the start | array.shift(element) | |
+| Add an element to the start | array.unshift(element) | |
 | Combine two arrays/lists | array.concat(array2) | list.extend(list2) |
 | Insert an element into a specific index | array.splice(index, 0, element) | list.insert(index, element) | 
 | Remove an element at a specific index | array.splice (index, 1) | list.pop(index) |
 | Remove an element | | list.remove(element) | 
+| Remove the first element | array.shift() | |
+| Remove the last element | array.pop() | |
 | Returns the first index of an element | array.indexOf(element) | list.index(element) |
 | Returns the last index of an element | array.lastIndexOf(element) | |
 | Counts the occurences of an element | | list.count(element) |
@@ -65,7 +68,9 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Remove all elements in an array/list | array.splice(0, array.length) | list.clear() |
 | Check if there is at least one element <br> matching the specified element | | list.any(element) |
 | Check if all elements equal a specified element | | list.all(element) |
+| Check if an object is an array/list | array.isArray(object) | |
 | Perform a function on each element | array.map(function)| map(function, list) |
+| Copy and reorder elements | array.copyWithin(position, start, end) | |
 
 ## Functions
 
@@ -96,7 +101,8 @@ Creating a function or defining procedures
 | --- | --- |
 | for (let i = 0; i < 10; i++) { <br> &nbsp; &nbsp; // do a thing <br> } | for i in range(10): <br> &nbsp; &nbsp; # do a thing |
 | for (var property in object) { <br> &nbsp; &nbsp; // do a thing <br> } | for thing in things: <br> &nbsp; &nbsp; # do a thing |
-| for (let value in array) { <br> &nbsp; &nbsp; // do a thing <br> } |
+| for (let value of array) { <br> &nbsp; &nbsp; // do a thing <br> } |
+| array.forEach(function(item, index) { <br> &nbsp; &nbsp; // do a thing <br> });
 
 ## Classes
 
