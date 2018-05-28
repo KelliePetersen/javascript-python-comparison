@@ -48,6 +48,14 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Upper case string | string.toUpperCase(); | string.upper() |
 | Lower case string | string.toLowerCase(); | string.lower() |
 | Concatenate with other objects | string.concat(arguments) or + | |
+| Check if string includes specified text | string.includes(text) | |
+| Check if string ends with specified text | string.endsWith(text) | |
+| Find the index of specified text | string.indexOf(text) | |
+| Find the last index of specified text | string.lastIndexOf(text) | |
+| Increase string length with spaces at start | string.padStart(length) | |
+| Increase string length with specified text | string.padStart(length, text) | |
+| Increase string length with spaces at end | string.padEnd(length) | |
+| Increase string length with specified text | string.padEnd(length, text) | |
 
 ## Arrays and Lists   
 A lowercase "array" means that you replace "array" with the string's name. A capitalized "Array" should be kept as it is. 
