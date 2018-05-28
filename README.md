@@ -30,19 +30,27 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
 
 ## Strings
+A lowercase "string" means that you replace "string" with the string's name. A capitalized "String" should be kept as it is. 
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
-| Variables inside strings (old) | `"Hello, I feel " + mood` | `"Hello, I feel {}".format(mood)` |
-| Variables inside strings (new) | \`Hello, I feel ${mood}\` | `f"Hello, I feel {mood}"` |
-| Find string length | `string.length();` | `len(string)` |
-| Find string inside a string | `"Hello".indexOf("ell");` returns 1 | `"Hello".find("ell")` returns 1 |
-| Find string from a starting index | `"Kellie". indexOf("e", 3)` returns 5 | `"Kellie".find("ell", 3)` returns 5 |
+| Create a string with UTF | String.fromCharCode(UTF, UTF, ...) | |
+| Create a string with code points | String.fromCodePoint() | |
+| Create new string containing another string's UTF value from a specific index | string.charAt(index) | |
+| Return the UTF code of a string at an index | string.charCodeAt(index) | |
+| Return the code point at an index | string.codePointAt(index) | |
+| Variables inside strings (old) | "Hello, I feel " + mood | "Hello, I feel {}".format(mood) |
+| Variables inside strings (new) | \`Hello, I feel ${mood}\` | f"Hello, I feel {mood}" |
+| Find string length | string.length(); | len(string) |
+| Find string inside a string | "Hello".indexOf("ell"); returns 1 | "Hello".find("ell") returns 1 |
+| Find string from a starting index | "Kellie". indexOf("e", 3) returns 5 | "Kellie".find("ell", 3) returns 5 |
 | Capitalize string | string[0].toUpperCase(); | string.capitalize() |
 | Upper case string | string.toUpperCase(); | string.upper() |
 | Lower case string | string.toLowerCase(); | string.lower() |
+| Concatenate with other objects | string.concat(arguments) or + | |
 
 ## Arrays and Lists   
+A lowercase "array" means that you replace "array" with the string's name. A capitalized "Array" should be kept as it is. 
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
@@ -65,6 +73,7 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | Return the last index of an element | array.lastIndexOf(element) | |
 | Couns the occurences of an element | array.filter(function(x){return x===element}).length | list.count(element) |
 | Sort elements in an array/list | array.sort() | list.sort() |
+| Create a new sorted version of the array/list | | sorted(list) |
 | Make a shallow copy | array.slice(0, array.length) | list.copy() | 
 | Remove all elements in an array/list | array.splice(0, array.length) | list.clear() |
 | Check if there is at least one element <br> matching the specified element | array.includes(element) | list.any(element) |
