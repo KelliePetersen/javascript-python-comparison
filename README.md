@@ -31,10 +31,12 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 
 ## Strings
 A lowercase "string" means that you replace "string" with the string's name. A capitalized "String" should be kept as it is.  
-Italics mean that a parameter is optional.
+Italics mean that a parameter is optional. An ellipsis means there can be many parameters. 
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
+| Return a string of the specified object | string.toString() | |
+| Return the primitive value of a string | string.valueOf() | |
 | Create a string with UTF | String.fromCharCode(UTF, UTF, ...) | |
 | Create a string with code points | String.fromCodePoint() | |
 | Create new string containing another string's <br> UTF value from a specific index | string.charAt(index) | |
@@ -49,6 +51,8 @@ Italics mean that a parameter is optional.
 | Capitalize string | string[0].toUpperCase(); | string.capitalize() |
 | Upper case string | string.toUpperCase(); | string.upper() |
 | Lower case string | string.toLowerCase(); | string.lower() |
+| Upper case in locale case mappings | string.toLocaleUpperCase(locale, ...) | |
+| Lower case in locale case mappings | string.toLocaleLowerCase(locale, ...) | |
 | Concatenate with other objects | string.concat(arguments) or + | |
 | Copy a portion of a string | string.slice(start, end) | |
 | Return a portion of a string by length | string.substr(start, *length*) | |
@@ -63,19 +67,24 @@ Italics mean that a parameter is optional.
 | Increase string length with specified text | string.padStart(length, text) | |
 | Increase string length with spaces at end | string.padEnd(length) | |
 | Increase string length with specified text | string.padEnd(length, text) | |
+| Remove white space from start and end | string.trim() | |
+| Remove white space from the start | string.trimStart() | |
+| Remove white space from the end | string.trimEnd() | |
 | Repeat the text in a string multiple times | string.repeat(number) | |
 | Return a new string that has replaced RegExp <br> matching content with the specified text | string.replace(RegExp, text) | |
 
 
 ## Arrays and Lists   
 A lowercase "array" means that you replace "array" with the string's name. A capitalized "Array" should be kept as it is.  
-Italics mean that a parameter is optional.
+Italics mean that a parameter is optional. An ellipsis means there can be many parameters.
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Create an array/list | var array = [1,2,3] | list = [1,2,3] |
 | Turn input into an array/list | Array.from(input) | list(input) |
 | Turn array/list into a string | array.join('') | |
+| Return a new string of the array/list | array.toString() | |
+| Return a locale string of the elements | array.toLocaleString(locales, options) | |
 | Select an index | array[2] | list[2] |
 | Find array length | string.length(); | len(string) |
 | Get an array/list backwards | array.reverse() | list.reverse() or list[::-1] |
@@ -106,6 +115,7 @@ Italics mean that a parameter is optional.
 | Perform a function on each element | array.map(function)| map(function, list) |
 | Copy and reorder elements | array.copyWithin(position, start, end) | |
 | Fill an existing array/list with values | array.fill(value, start, end) | |
+| Flatten a nested array/list | array.flat(depth) | |
 | Return an iterator with keys [a,b]-> 0 1 | var iterator = array.keys() | |
 | Return an iterator with values [a,b]-> a b | var iterator = array.value() | |
 | Return an iterator with key/value pairs | var iterator = array.entries() | |
