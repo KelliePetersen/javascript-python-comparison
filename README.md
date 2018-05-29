@@ -31,10 +31,11 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 
 ## Strings
 A lowercase "string" means that you replace "string" with the string's name. A capitalized "String" should be kept as it is.  
-Italics mean that a parameter is optional. An ellipsis means there can be many parameters. 
+Italics mean that a parameter is optional. An ellipsis means there can be many parameters. 'Start' and 'end' are indexes. 
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
+| Copy every nth element of a string | | string[slice(start, end, step)] |
 | Return a string of the specified object | string.toString() | |
 | Return the primitive value of a string | string.valueOf() | |
 | Create a string with UTF | String.fromCharCode(UTF, UTF, ...) | |
@@ -42,45 +43,57 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Create new string containing another string's <br> UTF value from a specific index | string.charAt(index) | |
 | Return the UTF code of a string at an index | string.charCodeAt(index) | |
 | Return the code point at an index | string.codePointAt(index) | |
-| Turn a string into an array/list | string.split('') | |
+| Turn a string into an array/list | string.split('') | list(string) |
 | Variables inside strings (old) | "Hello, I feel " + mood | "Hello, I feel {}".format(mood) |
 | Variables inside strings (new) | \`Hello, I feel ${mood}\` | f"Hello, I feel {mood}" |
 | Find string length | string.length(); | len(string) |
-| Find string inside a string | "Hello".indexOf("ell"); returns 1 | "Hello".find("ell") returns 1 |
-| Find string from a starting index | "Kellie". indexOf("e", 3) returns 5 | "Kellie".find("ell", 3) returns 5 |
+| Find text inside a string | string.indexOf('text') | string.find('text') |
+| Find text from a starting index | string.indexOf('text', *index*) | string.find('text', *index*) |
 | Capitalize string | string[0].toUpperCase(); | string.capitalize() |
+| Swap case of a string | | string.swapcase() |
 | Upper case string | string.toUpperCase(); | string.upper() |
 | Lower case string | string.toLowerCase(); | string.lower() |
 | Upper case in locale case mappings | string.toLocaleUpperCase(locale, ...) | |
 | Lower case in locale case mappings | string.toLocaleLowerCase(locale, ...) | |
-| Concatenate with other objects | string.concat(arguments) or + | |
+| Casefold string (caseless matching) | | string.casefold() |
+| Concatenate with other objects | string.concat(arguments) or + | +, += or StringIO |
 | Copy a portion of a string | string.slice(start, end) | |
 | Return a portion of a string by length | string.substr(start, *length*) | |
 | Return a portion of a string by index | string.substring(start, *end*) | |
 | Check if string includes specified text | string.includes(text) | |
 | Check if string starts with specified text | string.startsWith(text, *index*) | |
-| Check if string ends with specified text | string.endsWith(text, *index*) | |
+| Check if string ends with specified text | string.endsWith(text, *index*) | string.endswith(text, *start*, *end*) |
 | Find the index of specified text | string.indexOf(text) | |
 | Find the last index of specified text | string.lastIndexOf(text) | |
 | Find the index of text matching RegExp | string.search(RegExp) | |
+| Count occurrences of the specified text | | string.count(text, *start*, *end*) |
 | Increase string length with spaces at start | string.padStart(length) | |
-| Increase string length with specified text | string.padStart(length, text) | |
+| Increase string length with specified text | string.padStart(length, *text*) | |
 | Increase string length with spaces at end | string.padEnd(length) | |
-| Increase string length with specified text | string.padEnd(length, text) | |
+| Increase string length with specified text | string.padEnd(length, *text*) | |
+| Increase string length with spaces at both sides | Combine padStart and padEnd | string.center(length) |
+| Increase string length with specified text | Combine padStart and padEnd | string.center(length, *text*) |
 | Remove white space from start and end | string.trim() | |
 | Remove white space from the start | string.trimStart() | |
 | Remove white space from the end | string.trimEnd() | |
 | Repeat the text in a string multiple times | string.repeat(number) | |
 | Return a new string that has replaced RegExp <br> matching content with the specified text | string.replace(RegExp, text) | |
+| Replace tabs in string with spaces | | string.expandtabs(*number*) |
 
 
 ## Arrays and Lists   
 A lowercase "array" means that you replace "array" with the string's name. A capitalized "Array" should be kept as it is.  
-Italics mean that a parameter is optional. An ellipsis means there can be many parameters.
+Italics mean that a parameter is optional. An ellipsis means there can be many parameters. 'Start' and 'end' are indexes.
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Create an array/list | var array = [1,2,3] | list = [1,2,3] |
+| Make a shallow copy | array.slice(0, array.length) | list.copy() | 
+| Copy a portion of an array/list | array.slice(start, end) | list[start:end] |
+| Copy every nth element | | list[slice(start, end, step)] |
+| Sort elements in an array/list | array.sort() | list.sort() |
+| Create a new sorted version of the array/list | | sorted(list) |
+| Remove all elements in an array/list | array.splice(0, array.length) | list.clear() |
 | Turn input into an array/list | Array.from(input) | list(input) |
 | Turn array/list into a string | array.join('') | |
 | Return a new string of the array/list | array.toString() | |
@@ -89,7 +102,6 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Find array length | string.length(); | len(string) |
 | Get an array/list backwards | array.reverse() | list.reverse() or list[::-1] |
 | Get the last element | array[array.length-1]| list[-1] |
-| Copy a portion of an array/list | array.slice(start, end) | list[start:end] |
 | Add an element to the end | array.push(element) | list.append(element) |
 | Add an element to the start | array.unshift(element) | list.insert(0, element) |
 | Combine two arrays/lists | array.concat(array2) | list.extend(list2) |
@@ -100,11 +112,7 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Remove the last element | array.pop() | list.pop() |
 | Return the first index of an element | array.indexOf(element) | list.index(element) |
 | Return the last index of an element | array.lastIndexOf(element) | |
-| Couns the occurences of an element | array.filter(function(x){return x===element}).length | list.count(element) |
-| Sort elements in an array/list | array.sort() | list.sort() |
-| Create a new sorted version of the array/list | | sorted(list) |
-| Make a shallow copy | array.slice(0, array.length) | list.copy() | 
-| Remove all elements in an array/list | array.splice(0, array.length) | list.clear() |
+| Count  the occurences of an element | array.filter(function(x){return x===element}).length | list.count(element) |
 | Check if there is at least one element <br> matching the specified element | array.includes(element) | list.any(element) |
 | Check if all elements equal a specified element | array.every(function(x){return x===element} | list.all(element) |
 | Check if an object is an array/list | array.isArray(object) | |
