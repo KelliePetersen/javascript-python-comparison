@@ -30,15 +30,17 @@ JavaScript uses brackets { } to create blocks. Python uses indentation instead o
 | User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
 
 ## Strings
-A lowercase "string" means that you replace "string" with the string's name. A capitalized "String" should be kept as it is. 
+A lowercase "string" means that you replace "string" with the string's name. A capitalized "String" should be kept as it is.  
+Italics mean that a parameter is optional.
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Create a string with UTF | String.fromCharCode(UTF, UTF, ...) | |
 | Create a string with code points | String.fromCodePoint() | |
-| Create new string containing another string's UTF value from a specific index | string.charAt(index) | |
+| Create new string containing another string's <br> UTF value from a specific index | string.charAt(index) | |
 | Return the UTF code of a string at an index | string.charCodeAt(index) | |
 | Return the code point at an index | string.codePointAt(index) | |
+| Turn a string into an array/list | string.split('') | |
 | Variables inside strings (old) | "Hello, I feel " + mood | "Hello, I feel {}".format(mood) |
 | Variables inside strings (new) | \`Hello, I feel ${mood}\` | f"Hello, I feel {mood}" |
 | Find string length | string.length(); | len(string) |
@@ -48,22 +50,32 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Upper case string | string.toUpperCase(); | string.upper() |
 | Lower case string | string.toLowerCase(); | string.lower() |
 | Concatenate with other objects | string.concat(arguments) or + | |
+| Copy a portion of a string | string.slice(start, end) | |
+| Return a portion of a string by length | string.substr(start, *length*) | |
+| Return a portion of a string by index | string.substring(start, *end*) | |
 | Check if string includes specified text | string.includes(text) | |
-| Check if string ends with specified text | string.endsWith(text) | |
+| Check if string starts with specified text | string.startsWith(text, *index*) | |
+| Check if string ends with specified text | string.endsWith(text, *index*) | |
 | Find the index of specified text | string.indexOf(text) | |
 | Find the last index of specified text | string.lastIndexOf(text) | |
+| Find the index of text matching RegExp | string.search(RegExp) | |
 | Increase string length with spaces at start | string.padStart(length) | |
 | Increase string length with specified text | string.padStart(length, text) | |
 | Increase string length with spaces at end | string.padEnd(length) | |
 | Increase string length with specified text | string.padEnd(length, text) | |
+| Repeat the text in a string multiple times | string.repeat(number) | |
+| Return a new string that has replaced RegExp <br> matching content with the specified text | string.replace(RegExp, text) | |
+
 
 ## Arrays and Lists   
-A lowercase "array" means that you replace "array" with the string's name. A capitalized "Array" should be kept as it is. 
+A lowercase "array" means that you replace "array" with the string's name. A capitalized "Array" should be kept as it is.  
+Italics mean that a parameter is optional.
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Create an array/list | var array = [1,2,3] | list = [1,2,3] |
 | Turn input into an array/list | Array.from(input) | list(input) |
+| Turn array/list into a string | array.join('') | |
 | Select an index | array[2] | list[2] |
 | Find array length | string.length(); | len(string) |
 | Get an array/list backwards | array.reverse() | list.reverse() or list[::-1] |
