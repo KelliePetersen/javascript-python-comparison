@@ -5,13 +5,15 @@ Searching for something specific? Use ctrl + f (or cmd + f)
 
 ## Contents
 
-[Important Notes](#important-notes)  
-[Basics](#basics)  
-[Strings](#strings)  
-[Arrays and Lists](#arrays-and-lists)  
-[Functions](#functions)  
-[Loops](#loops)  
-[Classes](#classes)  
+- [Important Notes](#important-notes)  
+- [Basics](#basics)  
+- [Strings](#strings)  
+  - [Length and White Space](#length-and-white-space)  
+  - [Character Types](#character-types)  
+- [Arrays and Lists](#arrays-and-lists)  
+- [Functions](#functions)  
+- [Loops](#loops)  
+- [Classes](#classes)  
 
 ## Important Notes
 
@@ -46,27 +48,33 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Turn a string into an array/list | string.split('') | list(string) |
 | Variables inside strings (old) | "Hello, I feel " + mood | "Hello, I feel {}".format(mood) |
 | Variables inside strings (new) | \`Hello, I feel ${mood}\` | f"Hello, I feel {mood}" |
-| Find string length | string.length(); | len(string) |
 | Find text inside a string | string.indexOf('text') | string.find('text') |
 | Find text from a starting index | string.indexOf('text', *index*) | string.find('text', *index*) |
 | Capitalize string | string[0].toUpperCase(); | string.capitalize() |
 | Swap case of a string | | string.swapcase() |
-| Upper case string | string.toUpperCase(); | string.upper() |
-| Lower case string | string.toLowerCase(); | string.lower() |
-| Upper case in locale case mappings | string.toLocaleUpperCase(locale, ...) | |
-| Lower case in locale case mappings | string.toLocaleLowerCase(locale, ...) | |
+| Uppercase string | string.toUpperCase(); | string.upper() |
+| Lowercase string | string.toLowerCase(); | string.lower() |
+| Uppercase in locale case mappings | string.toLocaleUpperCase(locale, ...) | |
+| Lowercase in locale case mappings | string.toLocaleLowerCase(locale, ...) | |
 | Casefold string (caseless matching) | | string.casefold() |
-| Concatenate with other objects | string.concat(arguments) or + | +, += or StringIO |
 | Copy a portion of a string | string.slice(start, end) | |
 | Return a portion of a string by length | string.substr(start, *length*) | |
 | Return a portion of a string by index | string.substring(start, *end*) | |
 | Check if string includes specified text | string.includes(text) | |
 | Check if string starts with specified text | string.startsWith(text, *index*) | |
 | Check if string ends with specified text | string.endsWith(text, *index*) | string.endswith(text, *start*, *end*) |
-| Find the index of specified text | string.indexOf(text) | |
+| Find the index of specified text | string.indexOf(text, *index*) | string.find(text, *start*, *end*) or string.index(text, *start*, *end*) |
 | Find the last index of specified text | string.lastIndexOf(text) | |
 | Find the index of text matching RegExp | string.search(RegExp) | |
 | Count occurrences of the specified text | | string.count(text, *start*, *end*) |
+| Return a new string that has replaced RegExp <br> matching content with the specified text | string.replace(RegExp, text) | |
+
+### Length and White Space
+| Description | JavaScript | Python |
+| --- | --- | --- |
+| Find string length | string.length(); | len(string) |
+| Concatenate with other objects | string.concat(arguments) or + | +, += or StringIO |
+| Concatenate with an iterable | | string.join(iterable) |
 | Increase string length with spaces at start | string.padStart(length) | |
 | Increase string length with specified text | string.padStart(length, *text*) | |
 | Increase string length with spaces at end | string.padEnd(length) | |
@@ -77,8 +85,21 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Remove white space from the start | string.trimStart() | |
 | Remove white space from the end | string.trimEnd() | |
 | Repeat the text in a string multiple times | string.repeat(number) | |
-| Return a new string that has replaced RegExp <br> matching content with the specified text | string.replace(RegExp, text) | |
 | Replace tabs in string with spaces | | string.expandtabs(*number*) |
+
+### Character Types  
+| Description | JavaScript | Python |
+| --- | --- | --- |
+| Check if all characters are lowercase | | string.islower() |
+| Check if all characters are uppercase | | string.isupper() |
+| Check if all characters are titlecase | | string.istitle() |
+| Check if all characters are letters | | string.isalpha() |
+| Check if all characters are alphanumeric | | string.isalnum() |
+| Check if all characters are digits | | string.isdigit() |
+| Check if all characters are decimal | | string.isdecimal() |
+| Check if all characters are numeric | | string.isnumeric() |
+| Check if all characters are space | | string.isspace() |
+| Check if all characters are printable | |string.isprintable() |
 
 
 ## Arrays and Lists   
