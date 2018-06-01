@@ -17,23 +17,23 @@ Searching for something specific? Use ctrl + f (or cmd + f)
 
 ## Important Notes
 
-JavaScript uses brackets { } to create blocks. Python uses indentation instead of brackets. This means that expressions inside statements (such as a loop or class) must be on a new line and indented. Look at [Classes](#classes) section for examples.
+JavaScript uses brackets { } to create blocks. Python uses indentation instead of brackets. This means that expressions inside statements (such as a loop or class) must be on a new line and indented. Look at the [Classes](#classes) section for examples.
 
 ## Basics
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Shebang |
-| Single-line Comment | `// I am a comment` | `# I am a comment` |
-| Multi-line Comment| `/* I am a multi-line comment \*/` | `""" I am a multi-line comment """` |
-| Defining variables | `var/const/let myVariable = "I am a variable";` | `myVariable = "I am a variable"` | 
-| Printing lines | `console.log("Hello world");` | `print("Hello world")` |
-| Swap values | `[a, b] = [b, a];` | `a, b = b, a` |
+| Single-line Comment | // I am a comment | # I am a comment |
+| Multi-line Comment| /* I am a multi-line comment \*/ | """ I am a multi-line comment """ |
+| Defining variables | var/const/let myVariable = "I am a variable"; | myVariable = "I am a variable" | 
+| Printing lines | console.log("Hello world"); | print("Hello world") |
+| Swap values | [a, b] = [b, a]; | a, b = b, a |
 | User input prompt | let x = prompt("What is your name?") | x = input("What is your name?") |
 
 ## Strings
 A lowercase "string" means that you replace "string" with the string's name. A capitalized "String" should be kept as it is.  
-Italics mean that a parameter is optional. An ellipsis means there can be many parameters. 'Start' and 'end' are indexes. 
+*Italics* mean that a parameter is optional. An ellipsis (...) means there can be many parameters. 'Start' and 'end' are indexes. 
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
@@ -63,7 +63,7 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Check if string includes specified text | string.includes(text) | |
 | Check if string starts with specified text | string.startsWith(text, *index*) | |
 | Check if string ends with specified text | string.endsWith(text, *index*) | string.endswith(text, *start*, *end*) |
-| Find the index of specified text | string.indexOf(text, *index*) | string.find(text, *start*, *end*) or string.index(text, *start*, *end*) |
+| Find the index of specified text | string.indexOf(text, *index*) | string.find(text, *start*, *end*) <br> or string.index(text, *start*, *end*) |
 | Find the last index of specified text | string.lastIndexOf(text) | |
 | Find the index of text matching RegExp | string.search(RegExp) | |
 | Count occurrences of the specified text | | string.count(text, *start*, *end*) |
@@ -73,7 +73,7 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Find string length | string.length(); | len(string) |
-| Concatenate with other objects | string.concat(arguments) or + | +, += or StringIO |
+| Concatenate with other objects | string.concat(arguments) or + | +, += or StringIO module |
 | Concatenate with an iterable | | string.join(iterable) |
 | Increase string length with spaces at start | string.padStart(length) | |
 | Increase string length with specified text | string.padStart(length, *text*) | |
@@ -103,8 +103,8 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 
 
 ## Arrays and Lists   
-A lowercase "array" means that you replace "array" with the string's name. A capitalized "Array" should be kept as it is.  
-Italics mean that a parameter is optional. An ellipsis means there can be many parameters. 'Start' and 'end' are indexes.
+A lowercase "array" means that you replace "array" with the array's name. A capitalized "Array" should be kept as it is.  
+*Italics* mean that a parameter is optional. An ellipsis (...) means there can be many parameters. 'Start' and 'end' are indexes.
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
@@ -133,9 +133,9 @@ Italics mean that a parameter is optional. An ellipsis means there can be many p
 | Remove the last element | array.pop() | list.pop() |
 | Return the first index of an element | array.indexOf(element) | list.index(element) |
 | Return the last index of an element | array.lastIndexOf(element) | |
-| Count  the occurences of an element | array.filter(function(x){return x===element}).length | list.count(element) |
+| Count  the occurences of an element | array.filter(function(x) { <br> return x===element }).length | list.count(element) |
 | Check if there is at least one element <br> matching the specified element | array.includes(element) | list.any(element) |
-| Check if all elements equal a specified element | array.every(function(x){return x===element} | list.all(element) |
+| Check if all elements equal a specified element | array.every(function(x) { <br> return x===element } | list.all(element) |
 | Check if an object is an array/list | array.isArray(object) | |
 | Check if all elements pass a function test | array.every(function) | |
 | Check if some elements pass a function test | array.some(function) | |
