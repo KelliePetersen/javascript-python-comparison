@@ -1,5 +1,5 @@
 # JavaScript vs Python
-This is a side-by-side comparison of JavaScript (ES2015) and Python (3.6) syntax.  
+This is a side-by-side comparison of JavaScript (ES6/ES2015) and Python (3.6) syntax.  
 I created it so that I could use a description to find the command I need.  
 Searching for something specific? Use ctrl + f (or cmd + f)
 
@@ -14,6 +14,7 @@ Searching for something specific? Use ctrl + f (or cmd + f)
 - [Functions](#functions)  
 - [Loops](#loops)  
 - [Classes](#classes)  
+- [Objects](#objects)  
 
 ## Important Notes
 
@@ -109,7 +110,7 @@ A lowercase "array" means that you replace "array" with the array's name. A capi
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | Create an array/list | var array = [1,2,3] | list = [1,2,3] |
-| Make a shallow copy | array.slice(0, array.length) | list.copy() | 
+| Make a shallow copy | array.slice(0, array.length) or <br> ES6: let copy = [...array]; | list.copy() | 
 | Copy a portion of an array/list | array.slice(start, end) | list[start:end] |
 | Copy every nth element | | list[slice(start, end, step)] |
 | Sort elements in an array/list | array.sort() | list.sort() |
@@ -126,6 +127,7 @@ A lowercase "array" means that you replace "array" with the array's name. A capi
 | Add an element to the end | array.push(element) | list.append(element) |
 | Add an element to the start | array.unshift(element) | list.insert(0, element) |
 | Combine two arrays/lists | array.concat(array2) | list.extend(list2) |
+| Combine multiple arrays/lists | let combo = [...array1, ...array2, ...etc]; | |  
 | Insert an element into a specific index | array.splice(index, 0, element) | list.insert(index, element) | 
 | Remove an element at a specific index | array.splice (index, 1) | list.pop(index) |
 | Remove an element | | list.remove(element) | 
@@ -155,8 +157,21 @@ Creating a function or defining procedures
 
 | JavaScript | Python |
 | --- | --- |
-| `let myFunction = function() {` <br> &nbsp; &nbsp; `console.log("Hello world!");` <br> `}` | `def name():` <br> &nbsp; &nbsp; `print("Hello world!")` |
-| `function myFunction() {` <br> &nbsp; &nbsp; `console.log("Hello world!");` <br> `}` |
+| `let double = function() {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | `def double(num):` <br> &nbsp; &nbsp; `return num * 2` |
+| `function double(num) {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | |
+| `const double = (num) => num * 2;` | |
+
+Creating default parameters
+
+| JavaScript | Python |
+| --- | --- |
+| `myFunction(name = "Bob", age = 34) {}` | |
+
+Creating a function that accepts any number of parameters
+
+| JavaScript | Python |
+| --- | --- |
+| `myFunction(...args) {}` | |
 
 ## Loops
 
@@ -225,6 +240,17 @@ class Duckling(Duck):
 | --- | --- | --- |
 Assigning a class | `const donald = new Duck(‘donald’);` | `donald = Duck(‘donald’)` |
 Using a class method | `donald.quack();` | `donald.quack()` |
+
+## Objects
+
+Destructuring assignment (assigning variables to object properties) 
+
+| Description | JavaScript | Python |
+| --- | --- | --- |
+| The test object | `var object = {a:10, b:20, c:30};` | |
+| Singular destructuring | ES5: `var a = object.a;` (a returns 10) | |
+| Multiple destructuring | ES6: `var {a, b, c} = object;` | |
+| Destructuring with different variable names | `var {a:x, b:y, c:z} = object;` <br> (x returns 10, y returns 20, z returns 30) | |
 
 
 
