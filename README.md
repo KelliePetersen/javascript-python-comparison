@@ -11,8 +11,8 @@ Searching for something specific? Use ctrl + f (or cmd + f)
   - [Length and White Space](#length-and-white-space)  
   - [Character Types](#character-types)  
 - [Arrays and Lists](#arrays-and-lists)  
-- [Functions](#functions)  
 - [Loops](#loops)  
+- [Functions](#functions)  
 - [Classes](#classes)  
 - [Objects](#objects)  
 
@@ -102,7 +102,6 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Check if all characters are space | | string.isspace() |
 | Check if all characters are printable | |string.isprintable() |
 
-
 ## Arrays and Lists   
 A lowercase "array" means that you replace "array" with the array's name. A capitalized "Array" should be kept as it is.  
 *Italics* mean that a parameter is optional. An ellipsis (...) means there can be many parameters. 'Start' and 'end' are indexes.
@@ -152,28 +151,6 @@ A lowercase "array" means that you replace "array" with the array's name. A capi
 | Return an iterator with key/value pairs | var iterator = array.entries() | |
 | Destructuring an array/list | const [a, b,, ...arr] = [1, 2, 3, 4, 5, 6]; <br> (a=1, b=2, 3 is skipped, arr=[4,5,6]) | |
 
-## Functions
-
-Creating a function or defining procedures
-
-| JavaScript | Python |
-| --- | --- |
-| `let double = function() {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | `def double(num):` <br> &nbsp; &nbsp; `return num * 2` |
-| `function double(num) {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | |
-| `const double = (num) => num * 2;` | |
-
-Creating default parameters
-
-| JavaScript | Python |
-| --- | --- |
-| `myFunction(name = "Bob", age = 34) {}` | |
-
-Creating a function that accepts any number of parameters
-
-| JavaScript | Python |
-| --- | --- |
-| `myFunction(...args) {}` | |
-
 ## Loops
 
 **While Loop**
@@ -196,6 +173,36 @@ Creating a function that accepts any number of parameters
 | for (var property in object) { <br> &nbsp; &nbsp; // do a thing <br> } | for thing in things: <br> &nbsp; &nbsp; # do a thing |
 | for (let value of array) { <br> &nbsp; &nbsp; // do a thing <br> } |
 | array.forEach(function(item, index) { <br> &nbsp; &nbsp; // do a thing <br> });
+
+## Functions
+
+Creating a function or defining procedures
+
+| JavaScript | Python |
+| --- | --- |
+| `let double = function() {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | `def double(num):` <br> &nbsp; &nbsp; `return num * 2` |
+| `function double(num) {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | |
+| `const double = (num) => num * 2;` | |
+
+Creating default parameters
+
+| JavaScript | Python |
+| --- | --- |
+| `myFunction(name = "Bob", age = 34) {}` | |
+
+Creating a function that accepts any number of parameters
+
+| JavaScript | Python |
+| --- | --- |
+| `myFunction(...args) {}` | |
+
+Creating a constructor (ES5)
+```
+function Duck(name, color) {
+  this.name = name;
+  this.color = color;
+}
+```
 
 ## Classes
 
@@ -253,8 +260,10 @@ class Duck {
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
-Assigning a class | `const donald = new Duck(‘donald’);` | `donald = Duck(‘donald’)` |
-Using a class method | `donald.quack();` | `donald.quack()` |
+| Assigning a class | `const donald = new Duck('donald');` | `donald = Duck('donald')` |
+| Using a class method | `donald.quack();` | `donald.quack()` |
+| Changing a class value | | |
+| Checking if an instance | `donald instanceof Duck;` | |
 
 ## Objects
 
@@ -276,6 +285,3 @@ var myObject = {
 | Singular destructuring | `var a = object.a;` (a returns 10) | |
 | Multiple destructuring | `var {a, b, c} = object;` | |
 | Destructuring with different variable names | `var {a:x, b:y, c:z} = object;` <br> (x returns 10, y returns 20, z returns 30) | |
-
-
-
