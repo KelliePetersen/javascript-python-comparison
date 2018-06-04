@@ -150,6 +150,7 @@ A lowercase "array" means that you replace "array" with the array's name. A capi
 | Return an iterator with keys [a,b]-> 0 1 | var iterator = array.keys() | |
 | Return an iterator with values [a,b]-> a b | var iterator = array.value() | |
 | Return an iterator with key/value pairs | var iterator = array.entries() | |
+| Destructuring an array/list | const [a, b,, ...arr] = [1, 2, 3, 4, 5, 6]; <br> (a=1, b=2, 3 is skipped, arr=[4,5,6]) | |
 
 ## Functions
 
@@ -199,7 +200,6 @@ Creating a function that accepts any number of parameters
 ## Classes
 
 **Creating a Class**
-
 ```
 class Duck {
   constructor(name) {
@@ -236,6 +236,21 @@ class Duckling(Duck):
         self.name = name
 ```
 
+**Creating a Class with Private Variables**
+```
+class Duck {
+  constructor(name) {
+    this._name = name;
+  }
+  get name() {
+    return this._name;
+  }
+  set name(newName) {
+    this._name = newName;
+  }
+}
+```
+
 | Description | JavaScript | Python |
 | --- | --- | --- |
 Assigning a class | `const donald = new Duck(‘donald’);` | `donald = Duck(‘donald’)` |
@@ -243,13 +258,23 @@ Using a class method | `donald.quack();` | `donald.quack()` |
 
 ## Objects
 
-Destructuring assignment (assigning variables to object properties) 
+**Creating an Object**
+```
+var myObject = {
+  name: "Jerry",
+  age: 28,
+  sayHello: function() { return "Hello!" } OR
+  sayHello() { return "Hello!" } 
+}
+```
+
+**Destructuring assignment** (assigning variables to object properties) 
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
 | The test object | `var object = {a:10, b:20, c:30};` | |
-| Singular destructuring | ES5: `var a = object.a;` (a returns 10) | |
-| Multiple destructuring | ES6: `var {a, b, c} = object;` | |
+| Singular destructuring | `var a = object.a;` (a returns 10) | |
+| Multiple destructuring | `var {a, b, c} = object;` | |
 | Destructuring with different variable names | `var {a:x, b:y, c:z} = object;` <br> (x returns 10, y returns 20, z returns 30) | |
 
 
