@@ -18,7 +18,7 @@ Searching for something specific? Use ctrl + f (or cmd + f)
 
 ## Important Notes
 
-JavaScript uses brackets { } to create blocks. Python uses indentation instead of brackets. This means that expressions inside statements (such as a loop or class) must be on a new line and indented. Look at the [Classes](#classes) section for examples.
+JavaScript uses brackets { } to create blocks. Python uses colons and indentation. This means that expressions inside statements (such as a loop or class) must be on a new line and indented. Look at the [Classes](#classes) section for examples.
 
 ## Basics
 
@@ -157,13 +157,19 @@ A lowercase "array" means that you replace "array" with the array's name. A capi
 
 | JavaScript | Python |
 | --- | --- |
-| `while (i < 10) {` <br> &nbsp; &nbsp; `// do a thing` <br> `}` | `while i < 10:` <br> &nbsp; &nbsp; `# do a thing` |
+| while (i < 10) { <br> &nbsp; &nbsp; // do a thing <br> } | while i < 10: <br> &nbsp; &nbsp; # do a thing |
 
 **if/else**
 
 | JavaScript | Python |
 | --- | --- |
-| `if (i < 10) {` <br> &nbsp; &nbsp; `// do a thing;` <br> `} else if (i === 5) {` <br> &nbsp; &nbsp; `// do another thing;` <br> `} else {` <br> &nbsp; &nbsp; `// whatever` <br> `}` | `if i < 10:` <br> &nbsp; &nbsp; `# do a thing` <br> `else if i === 5:` <br> &nbsp; &nbsp; `# do another thing` <br> `else:` <br> &nbsp; &nbsp; ` # whatever` |
+| if (i < 10) { <br> &nbsp; &nbsp; // do a thing; <br> } else if (i === 5) { <br> &nbsp; &nbsp; // do another thing; <br> } else { <br> &nbsp; &nbsp; // whatever <br> } | if i < 10: <br> &nbsp; &nbsp; # do a thing <br> else if i === 5: <br> &nbsp; &nbsp; # do another thing <br> else: <br> &nbsp; &nbsp;  # whatever |
+
+**Ternary Operators**
+
+| JavaScript | Python |
+| --- | --- |
+| `(condition) ? trueResult : falseResult;` | `trueResult if condition else falseResult` |
 
 **For Loops**
 
@@ -180,9 +186,9 @@ Creating a function or defining procedures
 
 | JavaScript | Python |
 | --- | --- |
-| `let double = function() {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | `def double(num):` <br> &nbsp; &nbsp; `return num * 2` |
-| `function double(num) {` <br> &nbsp; &nbsp; `return num * 2;` <br> `}` | |
-| `const double = (num) => num * 2;` | |
+| let double = function() { <br> &nbsp; &nbsp; return num * 2; <br> } | def double(num): <br> &nbsp; &nbsp; return num * 2 |
+| function double(num) { <br> &nbsp; &nbsp; return num * 2; <br> } | |
+| const double = (num) => num * 2; | |
 
 Creating default parameters
 
