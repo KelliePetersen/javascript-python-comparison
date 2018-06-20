@@ -11,7 +11,7 @@ Searching for something specific? Use ctrl + f (or cmd + f)
   - [Length and White Space](#length-and-white-space)  
   - [Character Types](#character-types)  
 - [Arrays and Lists](#arrays-and-lists)  
-- [Loops](#loops)  
+- [Conditional Statements and Loops](#conditional-statements-and-loops)  
 - [Functions](#functions)  
 - [Classes](#classes)  
 - [Objects](#objects)  
@@ -151,7 +151,7 @@ A lowercase "array" means that you replace "array" with the array's name. A capi
 | Return an iterator with key/value pairs | var iterator = array.entries() | |
 | Destructuring an array/list | const [a, b,, ...arr] = [1, 2, 3, 4, 5, 6]; <br> (a=1, b=2, 3 is skipped, arr=[4,5,6]) | |
 
-## Loops
+## Conditional Statements and Loops
 
 **While Loop**
 
@@ -163,13 +163,36 @@ A lowercase "array" means that you replace "array" with the array's name. A capi
 
 | JavaScript | Python |
 | --- | --- |
-| if (i < 10) { <br> &nbsp; &nbsp; // do a thing; <br> } else if (i === 5) { <br> &nbsp; &nbsp; // do another thing; <br> } else { <br> &nbsp; &nbsp; // whatever <br> } | if i < 10: <br> &nbsp; &nbsp; # do a thing <br> else if i === 5: <br> &nbsp; &nbsp; # do another thing <br> else: <br> &nbsp; &nbsp;  # whatever |
+| if (i < 10) { <br> &nbsp; &nbsp; // do a thing; <br> } else if (i === 5) { <br> &nbsp; &nbsp; // do another thing; <br> } else { <br> &nbsp; &nbsp; // whatever <br> } | if i < 10: <br> &nbsp; &nbsp; # do a thing <br> elif i === 5: <br> &nbsp; &nbsp; # do another thing <br> else: <br> &nbsp; &nbsp;  # whatever |
 
 **Ternary Operators**
 
 | JavaScript | Python |
 | --- | --- |
 | `(condition) ? trueResult : falseResult;` | `trueResult if condition else falseResult` |
+
+**Switch**
+```
+switch(expression) {
+  case value1:
+    //do a thing
+    break;
+  case value2:
+    // do a different thing
+    break;
+  default:
+    // do the default thing
+} 
+```
+
+Python's closest equivalent to Switch, besides if/elif/else, are dictionaries:
+```
+def switch(expression):
+  return {
+    'a': value1,
+    'b': value2,
+  }.get(expression, defaultvalue)
+```
 
 **For Loops**
 
