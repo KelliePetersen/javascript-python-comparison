@@ -371,3 +371,27 @@ next(i) #1
 next(i) #2
 next(i) #3
 ```
+
+**Generator**
+```
+function* createGenerator() {
+  console.log("Start of block 1");
+  yield "End of block 1";
+  console.log("Start of block 2");
+  console.log("End of block 2");
+}
+
+const myGenerator = createGenerator();
+myGenerator.next(); //Start of block 1, End of block 1
+myGenerator.next(); //Start of block 2, End of block 2
+```
+```
+def my_generator():
+  print("Start of block 1")
+  yield "End of block 1"
+  print("Start of block 2")
+  print("End of block 2")
+  
+for num in my_generator():
+  print(num) 
+```
