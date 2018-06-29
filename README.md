@@ -15,6 +15,7 @@ Searching for something specific? Use ctrl + f (or cmd + f)
 - [Functions](#functions)  
 - [Classes](#classes)  
 - [Objects](#objects)  
+- [Iterators and Generators](#iterators-and-generators)
 
 ## Important Notes
 
@@ -314,3 +315,59 @@ var myObject = {
 | Singular destructuring | `var a = object.a;` (a returns 10) | |
 | Multiple destructuring | `var {a, b, c} = object;` | |
 | Destructuring with different variable names | `var {a:x, b:y, c:z} = object;` <br> (x returns 10, y returns 20, z returns 30) | |
+
+## Iterators and Generators
+
+**Creating an Iterator**
+```
+function createIterator(array) {
+  let nextIndex = 0;
+  return {
+    next: function() {
+      return nextIndex < array.length ? 
+        {value: item[nextIndex++], done: false} :
+        {done: true}
+    }
+  };
+}
+```
+In Python, iterators can be returned with the iter() function or built yourself.  
+For..in loops also internally create an iterator object. 
+```
+my_array = [1, 2, 3]
+my_iterator = iter(my_array)
+next(my_iterator) #1
+my_iterator.__next__() #2
+```
+```
+class create_iterator:
+  def __init__(self, max = 0):
+    self.max = max
+  def __iter__(self):
+    self.n = 0
+    return self
+  def __next__(self):
+    if self.n <= self.max:
+      return self.n += 1
+    else:
+      raise StopIteration
+```
+
+**Iterating**
+```
+let myIterator = createIterator([1, 2, 3]);
+myIterator.next().value //1
+myIterator.next().value //2
+myIterator.next().done //False
+myIterator.next().value //3
+myIterator.next().done //True
+```
+*Note: This returns the current value BEFORE iterating, which is normal behavior for an iterator.  
+To return the value after iterating, change [nextIndex++] to [++nextIndex] in the createIterator function.*
+```
+my_iterator = create_iterator(3)
+i = iter(my_iterator)
+next(i) #1
+next(i) #2
+next(i) #3
+```
