@@ -62,7 +62,7 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Copy a portion of a string | string.slice(start, end) | |
 | Return a portion of a string by length | string.substr(start, *length*) | |
 | Return a portion of a string by index | string.substring(start, *end*) | |
-| Check if string includes specified text | string.includes(text) | |
+| Check if string includes specified text | string.includes(text) | text in string |
 | Check if string starts with specified text | string.startsWith(text, *index*) | |
 | Check if string ends with specified text | string.endsWith(text, *index*) | string.endswith(text, *start*, *end*) |
 | Find the index of specified text | string.indexOf(text, *index*) | string.find(text, *start*, *end*) <br> or string.index(text, *start*, *end*) |
@@ -83,10 +83,10 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Increase string length with specified text | string.padEnd(length, *text*) | |
 | Increase string length with spaces at both sides | Combine padStart and padEnd | string.center(length) |
 | Increase string length with specified text | Combine padStart and padEnd | string.center(length, *text*) |
-| Remove white space from start and end | string.trim() | |
-| Remove white space from the start | string.trimStart() | |
-| Remove white space from the end | string.trimEnd() | |
-| Repeat the text in a string multiple times | string.repeat(number) | |
+| Remove white space from start and end | string.trim() | string.strip() |
+| Remove white space from the start | string.trimStart() | string.lstrip() |
+| Remove white space from the end | string.trimEnd() | string.rstrip() |
+| Repeat the text in a string multiple times | string.repeat(number) | string * number |
 | Replace tabs in string with spaces | | string.expandtabs(*number*) |
 
 ### Character Types  
