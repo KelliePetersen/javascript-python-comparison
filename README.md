@@ -82,11 +82,11 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Increase string length with specified text | string.padEnd(length, *text*) | |
 | Increase string length with spaces at both sides | Combine padStart and padEnd | string.center(length) |
 | Increase string length with specified text | Combine padStart and padEnd | string.center(length, *text*) |
-| Remove white space from start and end | string.trim() | |
-| Remove white space from the start | string.trimStart() | |
-| Remove white space from the end | string.trimEnd() | |
-| Repeat the text in a string multiple times | string.repeat(number) | |
-| Replace tabs in string with spaces | | string.expandtabs(*number*) |
+| Remove white space from start and end | string.trim() | string.strip() |
+| Remove white space from the start | string.trimStart() | string.lstrip() |
+| Remove white space from the end | string.trimEnd() | string.rstrip() |
+| Repeat the text in a string multiple times | string.repeat(number) | string * number |
+| Replace tabs in string with spaces | string.replace(/\t+/g, " ") | string.expandtabs(*number*) |
 
 ### Character Types  
 | Description | JavaScript | Python |
