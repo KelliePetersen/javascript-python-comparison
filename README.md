@@ -25,7 +25,6 @@ JavaScript uses brackets { } to create blocks. Python uses colons and indentatio
 
 | Description | JavaScript | Python |
 | --- | --- | --- |
-| Shebang |
 | Single-line Comment | // I am a comment | # I am a comment |
 | Multi-line Comment| /* I am a multi-line comment \*/ | """ I am a multi-line comment """ |
 | Defining variables | var/const/let myVariable = "I am a variable"; | myVariable = "I am a variable" | 
@@ -59,10 +58,10 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Uppercase in locale case mappings | string.toLocaleUpperCase(locale, ...) | |
 | Lowercase in locale case mappings | string.toLocaleLowerCase(locale, ...) | |
 | Casefold string (caseless matching) | | string.casefold() |
-| Copy a portion of a string | string.slice(start, end) | |
-| Return a portion of a string by length | string.substr(start, *length*) | |
-| Return a portion of a string by index | string.substring(start, *end*) | |
-| Check if string includes specified text | string.includes(text) | |
+| Copy a portion of a string | string.slice(start, end) | string[start, end] |
+| Return a portion of a string by length | string.substring(start, *start+length*) | string[start, start+end] |
+| Return a portion of a string by index | string.substring(start, *end*) | string[start, end] |
+| Check if string includes specified text | string.includes(text) | text in string |
 | Check if string starts with specified text | string.startsWith(text, *index*) | |
 | Check if string ends with specified text | string.endsWith(text, *index*) | string.endswith(text, *start*, *end*) |
 | Find the index of specified text | string.indexOf(text, *index*) | string.find(text, *start*, *end*) <br> or string.index(text, *start*, *end*) |
@@ -92,15 +91,15 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 ### Character Types  
 | Description | JavaScript | Python |
 | --- | --- | --- |
-| Check if all characters are lowercase | | string.islower() |
-| Check if all characters are uppercase | | string.isupper() |
-| Check if all characters are titlecase | | string.istitle() |
-| Check if all characters are letters | | string.isalpha() |
-| Check if all characters are alphanumeric | | string.isalnum() |
-| Check if all characters are digits | | string.isdigit() |
-| Check if all characters are decimal | | string.isdecimal() |
-| Check if all characters are numeric | | string.isnumeric() |
-| Check if all characters are space | | string.isspace() |
+| Check if all characters are lowercase | Use RegExp or char == char.toLowerCase() in a loop | string.islower() |
+| Check if all characters are uppercase | Use RegExp or char == char.toUpperCase() in a loop | string.isupper() |
+| Check if all characters are titlecase | Use RegExp | string.istitle() |
+| Check if all characters are letters | Use RegExp | string.isalpha() |
+| Check if all characters are alphanumeric | Use RegExp | string.isalnum() |
+| Check if all characters are digits | Use RegExp or loop | string.isdigit() |
+| Check if all characters are decimal | Use RegExp | string.isdecimal() |
+| Check if all characters are numeric | Use RegExp or loop | string.isnumeric() |
+| Check if all characters are space | string.trim() == "" | string.isspace() |
 | Check if all characters are printable | |string.isprintable() |
 
 ## Arrays and Lists   
