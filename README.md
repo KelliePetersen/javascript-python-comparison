@@ -51,7 +51,7 @@ A lowercase "string" means that you replace "string" with the string's name. A c
 | Variables inside strings (new) | \`Hello, I feel ${mood}\` | f"Hello, I feel {mood}" |
 | Find text inside a string | string.indexOf('text') | string.find('text') |
 | Find text from a starting index | string.indexOf('text', *index*) | string.find('text', *index*) |
-| Capitalize string | string[0].toUpperCase(); | string.capitalize() |
+| Capitalize string | string[0].toUpperCase() + string.substring(1); | string.capitalize() |
 | Swap case of a string | | string.swapcase() |
 | Uppercase string | string.toUpperCase(); | string.upper() |
 | Lowercase string | string.toLowerCase(); | string.lower() |
